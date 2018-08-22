@@ -8,6 +8,8 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+
+
 [bar/example]
 monitor = ${env:MONITOR:eDP-1}
 width = 100%
@@ -42,7 +44,7 @@ font-4 = "material icons:pixelsize=16;3"
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = alsa wlan cpu memory battery temperature date
+modules-right = alsa wlan cpu memory temperature battery date
 
 tray-position = right
 tray-padding = 2
@@ -107,6 +109,11 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+
+label-focused = %name%
+label-unfocused = %name%
+label-visible = %name%
+label-urgent = %name%
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -181,8 +188,8 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "  "
+;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #4bffdc
 label = %percentage_used%%
 
@@ -345,3 +352,4 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
