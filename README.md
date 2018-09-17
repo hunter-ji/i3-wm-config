@@ -36,11 +36,11 @@ exec i3 -V >> ~/.config/i3/log/i3log-$(date +'%F-%k-%M-%S') 2>&1
 #### 1.依赖
 依赖软件包括`alsa`,`MPD`等等,可以去[polybar的Github主页](https://github.com/jaagr/polybar)去查看相关文档。
 #### 2.显示输出报错
-报错内容大致为
+报错内容为
 ```
-'eDP-1' cannot be founded ...
+Monitor 'eDP-1' not found or disconnected
 ```
-这个问题需要看具体的硬件,可以查看[archlinux的xrander](https://wiki.archlinux.org/index.php/Xrandr),通过`xrander`查看自己主要适用的显示设备等等信息。
+这个问题需要看具体的硬件,可以查看[archlinux的xrander](https://wiki.archlinux.org/index.php/Xrandr),通过`xrander`查看自己主要适用的显示设备等等信息,然后修改i3和polybar配置文件内设备信息即可。
 
 
 ### 常用软件
