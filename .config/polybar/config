@@ -44,7 +44,8 @@ font-4 = "material icons:pixelsize=16;3"
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = alsa wlan cpu memory temperature battery date
+modules-center = xwindow
+modules-right = wlan cpu memory temperature battery date
 
 tray-position = right
 tray-padding = 2
@@ -237,11 +238,11 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = " %Y-%m-%d"
+;date-alt = " %Y-%m-%d"
 
 time = %H:%M
-time-alt = %H:%M:%S
+;time-alt = %H:%M:%S
 
 format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
