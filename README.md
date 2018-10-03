@@ -19,7 +19,7 @@
 
 #### 1.安装字体
 ```
-yaourt -S fft-font-awesome
+yaourt -S ttf-font-awesome
 ```
 #### 2.安装需要的包
 ```
