@@ -35,7 +35,13 @@ exec i3 -V >> ~/.config/i3/log/i3log-$(date +'%F-%k-%M-%S') 2>&1
 ### 遇到的问题
 #### 1.依赖
 依赖软件包括`alsa`,`MPD`等等,可以去[polybar的Github主页](https://github.com/jaagr/polybar)去查看相关文档。
-#### 2.显示输出报错
+#### 2.调试
+```
+cd .config/polybar
+bash launch.sh
+```
+调试查看其报错。除了此处查看报错,根据以上配置,i3启动之后会输出日志到`~/.config/i3/log/`,可以直接查看日志。
+#### 3.显示输出报错
 报错内容为
 ```
 Monitor 'eDP-1' not found or disconnected
