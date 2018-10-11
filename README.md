@@ -89,3 +89,4 @@ Monitor 'eDP-1' not found or disconnected
         <th>libreoffice, wps</th>
     </tr>
 </table>
+
