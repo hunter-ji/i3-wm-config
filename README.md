@@ -1,4 +1,4 @@
-## 我的i3配置文件
+## 我的i3配置文件-i3status分支
 
 ### 附上我的桌面
 ![my_desktop](my_desktop.png)
@@ -10,7 +10,7 @@
 * feh:设置背景图片
 * compton:终端透明
 * xfce4-terminal:终端
-* polybar:状态栏
+* i3status:状态栏
 * i3lock-fancy-git:锁屏
 
 ### 安装
@@ -23,7 +23,7 @@ yaourt -S fft-font-awesome
 ```
 #### 2.安装需要的包
 ```
-yaourt -S xfce4-terminal feh compton i3-gaps i3lock-fancy-git polybar-git
+yaourt -S xfce4-terminal feh compton i3-gaps i3lock-fancy-git i3status
 ```
 #### 3.配置
 在文件`.xinitrc`加入如下
@@ -31,17 +31,6 @@ yaourt -S xfce4-terminal feh compton i3-gaps i3lock-fancy-git polybar-git
 exec compton -b &
 exec i3 -V >> ~/.config/i3/log/i3log-$(date +'%F-%k-%M-%S') 2>&1
 ```
-
-### 遇到的问题
-#### 1.依赖
-依赖软件包括`alsa`,`MPD`等等,可以去[polybar的Github主页](https://github.com/jaagr/polybar)去查看相关文档。
-#### 2.显示输出报错
-报错内容为
-```
-Monitor 'eDP-1' not found or disconnected
-```
-这个问题需要看具体的硬件,可以查看[archlinux的xrander](https://wiki.archlinux.org/index.php/Xrandr),通过`xrander`查看自己主要适用的显示设备等等信息,然后修改i3和polybar配置文件内设备信息即可。
-
 
 ### 常用软件
 

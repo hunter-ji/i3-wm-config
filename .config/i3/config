@@ -53,9 +53,6 @@ bindsym $mod+Shift+f exec firefox
 # start the bluetooth
 bindsym $mod+Shift+b exec blueberry
 
-# start the rem
-bindsym $mod+Control+r exec remarkable
-
 # start slack
 bindsym $mod+Control+k exec slack
 
@@ -197,16 +194,16 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # assign
-# assign [class="chromium"] $ws4
-# assign [class="arandr"] $ws10
-# assign [class="wps"] $ws6
-# assign [class="et"] $ws6
-# assign [class="wpp"] $ws6
-# assign [class="virtualbox"] $ws9
-# assign [class="steam"] $ws5
-# assign [class="thunderbird"] $ws7
-# assign [class="slack"] $ws8
-# assign [class="virtualbox"] $ws9
+assign [class="Chromium"] $ws4
+assign [class="Arandr"] $ws10
+assign [class="Wps"] $ws6
+assign [class="Et"] $ws6
+assign [class="Wpp"] $ws6
+assign [class="Virtualbox"] $ws9
+assign [class="Steam"] $ws5
+assign [class="Thunderbird"] $ws7
+assign [class="Slack"] $ws8
+assign [class="Virtualbox"] $ws9
 
 # for_window [instance="Steam"] floating enable
 # for_window [instance="Steam"] border none
@@ -250,26 +247,27 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # i3status
-# bar {
-    # status_command i3status
-# #    status_command py3status -c ~/.i3status.conf
-    # strip_workspace_numbers yes
-    # separator_symbol " "
-    # position top
-    # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-    # font pango:DejaVu Sans Mono 10
-    # colors {
-        # background #000000
-        # statusline #ffffff
-        # separator #00E3E3
+bar {
+    status_command i3status
+#    status_command py3status -c ~/.i3status.conf
+    strip_workspace_numbers yes
+    separator_symbol " "
+    position top
+    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+    #font pango:DejaVu Sans Mono 10
+    font pango:Source Code Pro For Powerline Medium 11
+    colors {
+        background #000000
+        statusline #ffffff
+        separator #00E3E3
 
-        # focused_workspace  #4F4F4F #4F4F4F #ffffff
-        # active_workspace   #333333 #5f676a #ffffff
-        # inactive_workspace #333333 #222222 #888888
-        # urgent_workspace   #2f343a #900000 #ffffff
-        # binding_mode       #2f343a #900000 #ffffff
-    # }
-# }
+        focused_workspace  #4F4F4F #4F4F4F #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
+    }
+}
 
 # polybar
 # bar {
@@ -279,7 +277,7 @@ bindsym $mod+r mode "resize"
 new_window pixel 0
 
 # background
-exec_always --no-startup-id feh --bg-scale "/home/kuari/Picture/girl.png"
+exec_always --no-startup-id feh --bg-scale "/home/kuari/Picture/ls.jpg"
 
 # screen timeout
 exec --no-startup-id xset dpms 600 800 900
@@ -288,7 +286,7 @@ exec --no-startup-id xset dpms 600 800 900
 exec --no-startup-id xrandr --output eDP1 --mode 1920x1080 --same-as HDMI2
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
