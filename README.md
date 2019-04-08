@@ -1,10 +1,12 @@
 ## 我的i3配置文件
 
-不同的状态栏：  **polybar**   [**i3status**](https://github.com/Kuari/i3-wm-config/tree/i3status)
+不同的状态栏：**polybar** [**i3status**](https://github.com/Kuari/i3-wm-config/tree/i3status)
+
+语言 ：*中文*  [*English*](https://github.com/Kuari/i3-wm-config/tree/master/en)
 
 
 
-### 附上我的桌面
+### 截图
 
 ![my_desktop](my_desktop.png)
 

@@ -1,6 +1,8 @@
 ## My i3 configuration file
 
-Different status bars：  **polybar**   [**i3status**](https://github.com/Kuari/i3-wm-config/tree/i3status)
+Different status bars：  **polybar** [**i3status**](https://github.com/Kuari/i3-wm-config/tree/i3status)
+
+Language :  [*中文*](https://github.com/Kuari/i3-wm-config) *English*
 
 
 
