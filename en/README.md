@@ -60,7 +60,7 @@ The error message is
 ```
 Monitor 'eDP-1' not found or disconnected
 ```
-This problem needs to look at the specific hardware, you can view the [archlinux的xrander](https://wiki.archlinux.org/index.php/Xrandr), view the main display device and other information through xrander, and then modify the device information in the i3 and polybar configuration files.
+This problem needs to look at the specific hardware, you can view the [xrander](https://wiki.archlinux.org/index.php/Xrandr), view the main display device and other information through xrander, and then modify the device information in the i3 and polybar configuration files.
 
 
 
