@@ -11,7 +11,8 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
+font pango:Source Code Pro for Powerline Medium 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -57,7 +58,7 @@ bindsym $mod+Shift+b exec blueberry
 bindsym $mod+Control+k exec slack
 
 # start the win10
-bindsym $mod+Shift+v exec VBoxManage startvm "win10" --type gui
+# bindsym $mod+Shift+v exec VBoxManage startvm "win10" --type gui
 
 # start the chromium
 bindsym $mod+Shift+g exec chromium
@@ -91,6 +92,9 @@ bindsym $mod+Shift+n exec arandr
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# code
+bindsym $mod+c exec code
 
 # change focus
 bindsym $mod+$left focus left
@@ -156,17 +160,16 @@ bindsym $mod+y border pixel 3
 # use neither window title nor border
 bindsym $mod+u border none
 
-
 # workspace names
-set $ws1 1:
-set $ws2 2:
-set $ws3 3:
-set $ws4 4:
-set $ws5 5:
-set $ws6 6:
-set $ws7 7:
-set $ws8 8:
-set $ws9 9:
+set $ws1  1:
+set $ws2  2:
+set $ws3  3:
+set $ws4  4:
+set $ws5  5:
+set $ws6  6:
+set $ws7  7:
+set $ws8  8:
+set $ws9  9:
 set $ws10 0:
 
 # switch to workspace
@@ -194,16 +197,15 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # assign
-assign [class="Chromium"] $ws4
+assign [class="Chromium"] $ws3
+assign [class="Firefox"] $ws4
 assign [class="Arandr"] $ws10
 assign [class="Wps"] $ws6
 assign [class="Et"] $ws6
 assign [class="Wpp"] $ws6
-assign [class="Virtualbox"] $ws9
 assign [class="Steam"] $ws5
 assign [class="Thunderbird"] $ws7
 assign [class="Slack"] $ws8
-assign [class="Virtualbox"] $ws9
 
 # for_window [instance="Steam"] floating enable
 # for_window [instance="Steam"] border none
@@ -217,6 +219,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 gaps inner 10
 gaps outer 5
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #2b83a6 #2b83a6 #ffffff #dddddd   #2b83a6
+client.focused_inactive #212121 #212121 #86888c #292d2e   #5a5a5a
+client.unfocused        #212121 #212121 #86888c #292d2e   #5a5a5a
+client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
+client.placeholder      #212121 #0c0c0c #ffffff #212121   #262626
+client.background       #212121
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -252,21 +262,25 @@ bar {
 #    status_command py3status -c ~/.i3status.conf
     strip_workspace_numbers yes
     separator_symbol " "
-    position top
     font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
     #font pango:DejaVu Sans Mono 10
     font pango:Source Code Pro For Powerline Medium 11
-    colors {
-        background #000000
-        statusline #ffffff
-        separator #00E3E3
+    position                bottom
+    tray_output             primary
+    workspace_buttons       yes
 
-        focused_workspace  #4F4F4F #4F4F4F #ffffff
-        active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
+    colors {
+        background  #212121
+        statusline  #dddddd
+        separator   #666666
+        # class             border  backgr. text
+        focused_workspace   #2b83a6 #2b83a6 #ffffff
+        active_workspace    #212121 #212121 #ffffff
+        inactive_workspace  #212121 #212121 #86888c
+        urgent_workspace    #d64e4e #d64e4e #ffffff
+        binding_mode        #229c56 #229c56 #ffffff
     }
+
 }
 
 # polybar
