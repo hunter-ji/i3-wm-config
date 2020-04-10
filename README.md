@@ -4,13 +4,13 @@
 
 语言 ：*中文*  [*English*](https://github.com/Kuari/i3-wm-config/tree/master/en)
 
-
+<br />
 
 ## 截图
 
 ![my_desktop](my_desktop.png)
 
-
+<br />
 
 ## 安装
 
@@ -62,7 +62,7 @@ Monitor 'eDP-1' not found or disconnected
 ```
 这个问题需要看具体的硬件,可以查看[archlinux的xrander](https://wiki.archlinux.org/index.php/Xrandr),通过`xrander`查看自己主要适用的显示设备等等信息,然后修改i3和polybar配置文件内设备信息即可。
 
-
+<br />
 
 ## 快捷键
 
@@ -102,7 +102,7 @@ Monitor 'eDP-1' not found or disconnected
 | virtualbox中的win10虚拟机 | $mod+Shift+v |                    |
 | ...                       | ...          | ...                |
 
-
+<br />
 
 ## 自定义配置
 
@@ -123,7 +123,7 @@ bindsym $mod+Shift+f exec firefox
 * 运行脚本
 
 ```bash
-bindsym $mod+Shift+v exec VBoxManage startvm "win10" --type gui
+ bindsym $mod+Shift+s exec bash ~/example.sh
 ```
 
 * virtualbox虚拟机
@@ -140,9 +140,9 @@ bindsym $mod+Shift+v exec VBoxManage startvm "win10" --type gui
 exec_always --no-startup-id feh --bg-scale "/home/kuari/Picture/girl.png"
 ```
 
+<br />
 
-
-### 常用软件
+## 常用软件
 
 <table>
     <tr>
